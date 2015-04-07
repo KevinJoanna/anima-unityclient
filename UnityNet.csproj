@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F066ABB6-BA81-402A-9A01-37537046CE02}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sfsfs</RootNamespace>
+    <AssemblyName>UnityNet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityNet\Common\Serializa\BinaryDataInput .cs" />
+    <Compile Include="UnityNet\Common\Serializa\BinaryDataOutput.cs" />
+    <Compile Include="UnityNet\Common\Serializa\DataInput.cs" />
+    <Compile Include="UnityNet\Common\Serializa\Dataoutput.cs" />
+    <Compile Include="UnityNet\Common\Serializa\Decodeable.cs" />
+    <Compile Include="UnityNet\Common\Serializa\Encodeable.cs" />
+    <Compile Include="UnityNet\Common\Serializa\Serialization.cs" />
+    <Compile Include="UnityNet\Common\Serializa\SerializationAdapter.cs" />
+    <Compile Include="UnityNet\Common\Utils\ByteArray.cs" />
+    <Compile Include="UnityNet\Common\Utils\HexDumpFormatter.cs" />
+    <Compile Include="UnityNet\Common\Utils\Bytes.cs" />
+    <Compile Include="UnityNet\Core\AbstractClient.cs" />
+    <Compile Include="UnityNet\Core\AbstractEndpoint.cs" />
+    <Compile Include="UnityNet\Core\ClientDisconnectionReason.cs" />
+    <Compile Include="UnityNet\Core\Handler\AbstractHandler.cs" />
+    <Compile Include="UnityNet\Core\Client.cs" />
+    <Compile Include="UnityNet\Core\Endpoint.cs" />
+    <Compile Include="UnityNet\Core\ExchangeClient.cs" />
+    <Compile Include="UnityNet\Core\Handler\DefaultHandler.cs" />
+    <Compile Include="UnityNet\Core\Handler\IHandler.cs" />
+    <Compile Include="UnityNet\Core\Message\AbstractMessage.cs" />
+    <Compile Include="UnityNet\Core\Message\BroadCast.cs" />
+    <Compile Include="UnityNet\Core\Message\HandSankeReq.cs" />
+    <Compile Include="UnityNet\Core\Message\HandSnakeResp.cs" />
+    <Compile Include="UnityNet\Core\Message\HeartBeatResp.cs" />
+    <Compile Include="UnityNet\Core\Message\Push.cs" />
+    <Compile Include="UnityNet\Core\Message\RequestArg.cs" />
+    <Compile Include="UnityNet\Core\Message\Kick.cs" />
+    <Compile Include="UnityNet\Core\Message\Packet.cs" />
+    <Compile Include="UnityNet\Core\Message\PacketHeader.cs" />
+    <Compile Include="UnityNet\Core\Message\Request.cs" />
+    <Compile Include="UnityNet\Core\Message\Response.cs" />
+    <Compile Include="UnityNet\Core\Message\ResponseArg.cs" />
+    <Compile Include="UnityNet\Core\Message\HeartBeatReq.cs" />
+    <Compile Include="UnityNet\Core\ResponseMappingInfo.cs" />
+    <Compile Include="UnityNet\Core\Protocol\Codec.cs" />
+    <Compile Include="UnityNet\Core\Protocol\PacketReadState.cs" />
+    <Compile Include="UnityNet\Core\Protocol\PacketReadTransition.cs" />
+    <Compile Include="UnityNet\Core\Protocol\ProtocolCodecException.cs" />
+    <Compile Include="UnityNet\Core\Protocol\ProtocolCodecFactory.cs" />
+    <Compile Include="UnityNet\Core\Protocol\ProtocolDecode.cs" />
+    <Compile Include="UnityNet\Core\Protocol\ProtocolEncode.cs" />
+    <Compile Include="UnityNet\Core\Protocol\DefaultCodec.cs" />
+    <Compile Include="UnityNet\Core\Protocol\DefaultProtocolCodecFactory.cs" />
+    <Compile Include="UnityNet\Core\Protocol\DefaultProtocolDecode.cs" />
+    <Compile Include="UnityNet\Core\Protocol\DefaultProtocolEncode.cs" />
+    <Compile Include="UnityNet\Core\Remoting\AbstractChannel.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Channel.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Support\BroadcastChannel.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Support\BroadcastChannel1.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Support\MulticastChannel.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Support\TCPChannel.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Support\UDPChannel.cs" />
+    <Compile Include="UnityNet\Core\Remoting\Support\UdpListener.cs" />
+    <Compile Include="UnityNet\Entities\ClientTarget.cs" />
+    <Compile Include="UnityNet\Entities\ClientTargetManager.cs" />
+    <Compile Include="UnityNet\Entities\HostData.cs" />
+    <Compile Include="UnityNet\Entities\HostManager.cs" />
+    <Compile Include="UnityNet\Event\ClientEvent.cs" />
+    <Compile Include="UnityNet\Event\GeneralEventArgs.cs" />
+    <Compile Include="UnityNet\Event\IEvent.cs" />
+    <Compile Include="UnityNet\Event\MyEvent.cs" />
+    <Compile Include="UnityNet\Event\EventBase.cs" />
+    <Compile Include="UnityNet\Event\EventDispatcher.cs" />
+    <Compile Include="UnityNet\Event\IDispatchable.cs" />
+    <Compile Include="UnityNet\Event\IDispatcher.cs" />
+    <Compile Include="UnityNet\Event\NetCallBackParame.cs" />
+    <Compile Include="UnityNet\Event\SFEvent.cs" />
+    <Compile Include="UnityNet\Event\UnityClientEvent.cs" />
+    <Compile Include="UnityNet\FSM\FiniteStateMachine.cs" />
+    <Compile Include="UnityNet\FSM\FSMState.cs" />
+    <Compile Include="UnityNet\Logging\Logger.cs" />
+    <Compile Include="UnityNet\Logging\LoggerEvent.cs" />
+    <Compile Include="UnityNet\Logging\LogLevel.cs" />
+    <Compile Include="UnityNet\LoginReq.cs" />
+    <Compile Include="UnityNet\LoginResp.cs" />
+    <Compile Include="UnityNet\UnityClient.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
